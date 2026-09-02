@@ -400,12 +400,12 @@ function form(){
                 disableChineseInputAndHideMouse();
                 const levels=+pid%2===0?['global','local']:['local','global'];
                 const tl=[];
-                //tl.push(guide('section1'));
-                //levels.forEach(l=>addSection(tl,1,l,1));
+                tl.push(guide('section1'));
+                levels.forEach(l=>addSection(tl,1,l,1));
                 tl.push(guide('section2'));
                 levels.forEach(l=>addSection(tl,2,l,4));
-                //tl.push(guide('section3'));
-                //levels.forEach(l=>addSection(tl,3,l,2));
+                tl.push(guide('section3'));
+                levels.forEach(l=>addSection(tl,3,l,2));
                 tl.push({
                     type:jsPsychHtmlKeyboardResponse,
                     stimulus:'<h2>实验完成，谢谢参与！</h2><p class="continue-message">请点击下方按钮下载全部实验数据</p><button id="download-results" class="download-button">下载 ZIP 数据包</button>',
